@@ -47,6 +47,9 @@ dependencies:
   #Ui
   persistent_bottom_nav_bar_v2: ^6.2.0
 
+  #State Management
+  provider: ^6.1.5+1
+
 dev_dependencies:
   flutter_test:
     sdk: flutter

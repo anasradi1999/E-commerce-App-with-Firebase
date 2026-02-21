@@ -23,7 +23,7 @@ Route<dynamic> onGenerate(RouteSettings settings) {
         builder: (_) => const ButtonNavbarHomePage(),
         settings: settings,
       );
-    case AppRouters.lodingPageRoutes:
+    case AppRouters.landingPageRoutes:
     default:
       return CupertinoPageRoute(
         builder: (_) => const LandingPage(),
