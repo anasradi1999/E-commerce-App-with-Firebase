@@ -99,7 +99,7 @@ class _LoginPageState extends State<LoginPage> {
                           MainButton(text: 'LOGIN', onTap: () {
                             if (_formKey.currentState!.validate()) {
                               debugPrint('Login');
-                              //Navigator.pushReplacementNamed(context, AppRouters.buttonNavbarHomePageRoutes);
+                              Navigator.pushReplacementNamed(context, AppRouters.buttonNavbarHomePageRoutes);
                             }
                           },
                           ),
