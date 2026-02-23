@@ -1,6 +1,5 @@
 import 'package:ecommerce_app_with_firebase/helper/routes.dart';
 import 'package:flutter/cupertino.dart';
-
 import '../views/screens/home/ui/button_navbar_home_page.dart';
 import '../views/screens/landing_page.dart';
 import '../views/screens/login_page.dart';
@@ -13,14 +12,14 @@ Route<dynamic> onGenerate(RouteSettings settings) {
         builder: (_) => const LoginPage(),
         settings: settings,
       );
-      case AppRouters.registerPageRoutes:
+    case AppRouters.registerPageRoutes:
       return CupertinoPageRoute(
         builder: (_) => const RegisterPage(),
         settings: settings,
       );
-      case AppRouters.buttonNavbarHomePageRoutes:
+    case AppRouters.buttonNavbarHomePageRoutes:
       return CupertinoPageRoute(
-        builder: (_) => const ButtonNavbarHomePage(),
+        builder: (context) => const ButtonNavbarHomePage(),
         settings: settings,
       );
     case AppRouters.landingPageRoutes:

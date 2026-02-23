@@ -16,6 +16,15 @@ class AuthController with ChangeNotifier{
       await auth.signUpWithEmailAndPassword(email, password);
     }
 
+    Future<void> signOut() async {
+    try{
+      await auth.signOut();
+    }
+  catch(e){
+      debugPrint(e.toString());
+  }
+}
+
   void updateEmail(String email) => copyWith(email: email);
 
   void updatePassword(String password) => copyWith(password: password);

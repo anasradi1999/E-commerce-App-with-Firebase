@@ -4,6 +4,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
+import 'controllers/auth_controller.dart';
 import 'helper/routes.dart';
 
 void main() async{
@@ -17,8 +18,16 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Provider<AuthBase>(
-      create: (_) => Auth(),
+    return MultiProvider(
+        providers: [
+          Provider<AuthBase>(
+            create: (_) => Auth(),
+          ),
+          ChangeNotifierProvider<AuthController>(
+            create: (context) =>
+                AuthController(auth: context.read<AuthBase>()),
+          ),
+        ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
         title: 'Ecommerce App',
