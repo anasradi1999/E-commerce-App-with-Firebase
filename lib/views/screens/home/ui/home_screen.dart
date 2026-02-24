@@ -50,7 +50,7 @@ class HomeScreen extends StatelessWidget {
                   child: ListView(
                     scrollDirection: Axis.horizontal,
                     children: dumnyProducts
-                        .where((product) => product.discontValue > 0)
+                        .where((product) => product.discountValue > 0)
                         .map((e) => Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: ListItemHome(
