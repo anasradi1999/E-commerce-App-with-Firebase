@@ -81,7 +81,7 @@ class _ProductDetailsState extends State<ProductDetails> {
                             .copyWith(fontWeight: FontWeight.w600),
                       ),
                       Text(
-                        '${widget.product.price}\$',
+                        widget.product.discountValue==0 || widget.product.discountValue == null?'\$${widget.product.price}':'\$${widget.product.price * (widget.product.discountValue / 100)}',
                         style: Theme.of(context).textTheme.headlineMedium!
                             .copyWith(fontWeight: FontWeight.w600),
                       ),
