@@ -8,7 +8,7 @@ class Products {
   final String imageUrl;
   final int discountValue;
   final String category;
-  final double? rating;
+  final int? rating;
 
   Products({
     required this.id,
@@ -38,29 +38,29 @@ class Products {
       imageUrl: map['imageUrl'] as String,
       discountValue: map['discountValue'] as int,
       category: map['category'] as String,
-      rating: map['rating'] as double,
+      rating: map['rate'] as int,
     );
   }
 }
 
 List<Products> dumnyProducts = [
   Products(
-    id: '1', title: 'hot T-shirts', price: 22, imageUrl: AppAssets.superSummerSaleAsset, discountValue:20,category: 'tshirts',rating: 4.5,
+    id: '1', title: 'hot T-shirts', price: 22, imageUrl: AppAssets.superSummerSaleAsset, discountValue:20,category: 'tshirts',rating: 4,
   ),
   Products(
-    id: '2', title: 'hot T-shirts2', price: 100, imageUrl: AppAssets.topBannerHomePageAsset, discountValue:10,rating: 4.1,
+    id: '2', title: 'hot T-shirts2', price: 100, imageUrl: AppAssets.topBannerHomePageAsset, discountValue:10,rating: 3,
   ),
   Products(
-    id: '3', title: 'hot T-shirts3', price: 50, imageUrl: AppAssets.superSummerSaleAsset,category: 'tshirts',rating: 4.9,
+    id: '3', title: 'hot T-shirts3', price: 50, imageUrl: AppAssets.superSummerSaleAsset,category: 'tshirts',rating: 2,
   ),
   Products(
-    id: '3', title: 'hot T-shirts3', price: 50, imageUrl: AppAssets.topBannerHomePageAsset,category: 'tshirts',rating: 4.9,
+    id: '3', title: 'hot T-shirts3', price: 50, imageUrl: AppAssets.topBannerHomePageAsset,category: 'tshirts',rating: 1,
   ),
   Products(
-    id: '3', title: 'hot T-shirts3', price: 50, imageUrl: AppAssets.superSummerSaleAsset,category: 'tshirts',rating: 4.9,
+    id: '3', title: 'hot T-shirts3', price: 50, imageUrl: AppAssets.superSummerSaleAsset,category: 'tshirts',rating:5,
   ),
   Products(
-    id: '3', title: 'hot T-shirts3', price: 50, imageUrl: AppAssets.topBannerHomePageAsset,category: 'tshirts',rating: 4.9,
+    id: '3', title: 'hot T-shirts3', price: 50, imageUrl: AppAssets.topBannerHomePageAsset,category: 'tshirts',rating: 4,
   ),
 ];
 

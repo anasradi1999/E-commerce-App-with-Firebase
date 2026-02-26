@@ -27,6 +27,7 @@ class MyApp extends StatelessWidget {
             create: (context) =>
                 AuthController(auth: context.read<AuthBase>()),
           ),
+
         ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
