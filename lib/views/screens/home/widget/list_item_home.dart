@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../../../../models/products.dart';
 
+
 class ListItemHome extends StatelessWidget {
   final Products product;
   final String? nameList;
@@ -67,7 +68,7 @@ class ListItemHome extends StatelessWidget {
                               child: Center(
                                 child: Text(
                                   nameList == 'Sale'
-                                      ? '- ${product.discontValue}%'
+                                      ? '- ${product.discountValue}%'
                                       : 'New',
                                   style: Theme.of(context)
                                       .textTheme
@@ -140,7 +141,7 @@ class ListItemHome extends StatelessWidget {
                           ),
                           TextSpan(
                             text:
-                                ' \$${product.price * (product.discontValue / 100)}',
+                                ' \$${product.price * (product.discountValue / 100)}',
                             style: Theme.of(context).textTheme.labelMedium!
                                 .copyWith(color: Colors.grey),
                           ),
