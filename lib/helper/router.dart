@@ -1,5 +1,7 @@
 import 'package:ecommerce_app_with_firebase/helper/routes.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:provider/provider.dart';
+import '../controllers/database_controller.dart';
 import '../views/screens/home/ui/button_navbar_home_page.dart';
 import '../views/screens/landing_page.dart';
 import '../views/screens/login_page.dart';

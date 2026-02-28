@@ -1,11 +1,11 @@
 import 'package:ecommerce_app_with_firebase/controllers/auth_controller.dart';
 import 'package:ecommerce_app_with_firebase/views/screens/home/ui/button_navbar_home_page.dart';
-import 'package:ecommerce_app_with_firebase/views/screens/home/ui/home_screen.dart';
 import 'package:ecommerce_app_with_firebase/views/screens/login_page.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
+import '../../controllers/database_controller.dart';
 import '../../services/auth.dart';
 
 class LandingPage extends StatelessWidget {
@@ -27,8 +27,12 @@ class LandingPage extends StatelessWidget {
               child: const LoginPage(),
             );
           }
-          return ButtonNavbarHomePage();
+          return Provider<Database>(
+            create: (_) => FireStoreDatabase(user.uid),
+            child: const ButtonNavbarHomePage(),
+          );
         }
+
         return const Scaffold(body: Center(child: CircularProgressIndicator()));
       },
     );
