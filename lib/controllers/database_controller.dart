@@ -7,7 +7,7 @@ abstract class Database {
   Stream<List<Products>> getNewProductsStream();
   Stream<List<Products>> getSaleProductsStream();
 }
-
+String get documentId => DateTime.now().toIso8601String();
 class FireStoreDatabase implements Database {
   final String uid;
   final FirestoreServices _service = FirestoreServices.instance;

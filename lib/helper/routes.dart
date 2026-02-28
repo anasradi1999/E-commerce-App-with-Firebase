@@ -4,6 +4,8 @@ class AppRouters{
    static const String registerPageRoutes = '/register';
    static const String buttonNavbarHomePageRoutes = '/button_navbar_home';
    static const String profilePageRoutes = '/profile';
+   static const String productDetailsPageRoutes = '/product-details';
+
 
 
 }
